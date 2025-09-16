@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKS Mahaputra Cerdas Utama</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+
+        .section-title {
+            margin-top: 80px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 2.5rem;
+            color: #007bff;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #007bff;
+            margin: 10px auto 0;
+        }
+
+        /* Navbar */
+        .navbar-custom {
+            background-color: #007bff !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #ffdd57 !important;
+        }
+
+        .navbar-custom .btn-primary {
+            background-color: white;
+            color: #007bff;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-custom .btn-primary:hover {
+            background-color: #ffdd57;
+            color: #007bff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        /* About Section */
+        .about img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about img:hover {
+            transform: scale(1.05);
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Programs Section */
+        .programs h5 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .programs p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Jurusan Section */
+        .jurusan-section img {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .jurusan-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .jurusan-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Manajemen Section */
+        .manajemen-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid #007bff;
+        }
+
+        .manajemen-section h5 {
+            color: #007bff;
+            margin-top: 10px;
+        }
+
+        .manajemen-section p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .contact-section iframe {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">SMKS Mahaputra Cerdas Utama</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#profil">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#jurusan">Jurusan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#manajemen">Manajemen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="#ppdb">PPDB</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- About Section -->
+<section id="profil" class="container about" style="margin-top: 80px;">
+    <h2 class="section-title">Tentang Kami</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="mahaputra.png" alt="Sekolah Impian">
+        </div>
+        <div class="col-md-6">
+            <p>Kami adalah sekolah yang berfokus pada pengembangan akademik dan karakter siswa. Di SMKS Mahaputra Cerdas Utama, kami mempersiapkan siswa untuk menjadi generasi yang tangguh dan berkompeten di dunia kerja.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Programs Section -->
+<section id="jurusan" class="container programs" style="margin-top: 80px;">
+    <h2 class="section-title">Program Unggulan</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <h5>Pendidikan STEM</h5>
+            <p>Program berbasis ilmu pengetahuan, teknologi, teknik, dan matematika untuk mempersiapkan siswa di bidang sains dan teknologi.</p>
+        </div>
+        <div class="col-md-4">
+            <h5>Bahasa Asing</h5>
+            <p>Program bahasa asing untuk meningkatkan kemampuan komunikasi siswa dalam berbagai bahasa global.</p>
+        </div>
+        <div class="col-md-4">
+            <h5>Olahraga & Seni</h5>
+            <p>Program untuk mengembangkan bakat seni dan olahraga siswa yang berfokus pada pengembangan karakter dan kreativitas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Jurusan Section -->
+<section id="jurusanPPLG" class="container jurusan-section" style="margin-top: 80px;">
+    <h2 class="section-title">Jurusan RPL (Rekayasa Perangkat Lunak)</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Jurusan RPL mempersiapkan siswa untuk menjadi ahli dalam bidang pemrograman. Siswa akan dilatih dalam pembuatan aplikasi, pengembangan perangkat lunak, serta pemahaman tentang sistem informasi dan teknologi terbaru.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="rpl.png" alt="Jurusan PPLG" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<section id="jurusanMM" class="container jurusan-section" style="margin-top: 80px;">
+    <h2 class="section-title">Jurusan MM (Multi Media)</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Jurusan MM mempersiapkan siswa untuk menjadi ahli dalam bidang Visual. Siswa akan dilatih dalam design apk, perfilman, serta pemahaman tentang animasi.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="mm.png" alt="Jurusan MM" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<!-- Manajemen Section -->
+<section id="manajemen" class="container manajemen-section" style="margin-top: 80px;">
+    <h2 class="section-title">Manajemen SMKS Mahaputra Cerdas Utama</h2>
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="foto prof.png" alt="Kepala Sekolah">
+            <h5>Prof.Dr.Ir.H.Eddy Jusuf. Sp. Ms, M.Kom. IPU</h5>
+            <p>Pembina Yayasan</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="foto ibu yayasan.png" alt="Wakil Kepala Sekolah Kurikulum">
+            <h5>Dr. Hj. Dewi Indriani Jusuf,SE. Msi. CDMP</h5>
+            <p>Ketua Yayasan</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="foto pa kepsek.png" alt="Wakil Kepala Sekolah Kesiswaan">
+            <h5>Drs. Dedi Hidayat, M.M.Pd</h5>
+            <p>CTO</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="kontak" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Kontak Kami</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Jika Anda ingin mendapatkan informasi lebih lanjut, jangan ragu untuk menghubungi kami!</p>
+                <p>Email: info@smkmahaputra.sch.id</p>
+                <p>Telepon: +62 123 4567</p>
+            </div>
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.0960420832143!2d107.57684477399837!3d-6.997970293003204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9681a28859f%3A0x48f4d9cf5a8ab783!2sSMKS%20Mahaputra%20Cerdas%20Utama!5e0!3m2!1sid!2sid!4v1732846054576!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <p>&copy; 2024 SMKS Mahaputra Cerdas Utama. Semua Hak Dilindungi.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
